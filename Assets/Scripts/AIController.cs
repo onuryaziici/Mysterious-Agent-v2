@@ -97,6 +97,7 @@ public class AIController : MonoBehaviour
         viewMeshFilter.mesh = viewMesh;
 
         PlayerPrefs.SetInt("Enemies", GameObject.FindGameObjectsWithTag("Enemy").Length);
+        //StartCoroutine(TakeDamage());
     }
 
     private void Update()

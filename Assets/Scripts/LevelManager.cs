@@ -49,10 +49,23 @@ public class LevelManager : MonoBehaviour
         {
             score = PlayerPrefs.GetFloat("Score");
         }
+        if (!PlayerPrefs.HasKey("Level"))
+        {
+            PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex);
+        }
         score = PlayerPrefs.GetFloat("Checkpoint");
-        PlayerPrefs.SetFloat("Score", level);
-        SceneManager.LoadScene(PlayerPrefs.GetInt("Level"));
+        PlayerPrefs.SetFloat("Score", score);
+        //SceneManager.LoadScene(PlayerPrefs.GetInt("Level"));
         scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Checkpoint")).ToString();
+        List<int> buildIndexClone = new List<int>();
+        buildIndexClone = buildIndex;
+        if (buildIndexClone.Contains(PlayerPrefs.GetInt("Level")))
+        {
+            buildIndexClone.Remove(PlayerPrefs.GetInt("Level"));
+            int buildIndex = Random.Range(0, buildIndexClone.Count);
+            SceneManager.LoadScene(buildIndex);
+            Debug.Log(PlayerPrefs.GetInt("Level"));
+        }
     }
     private void Update()
     {

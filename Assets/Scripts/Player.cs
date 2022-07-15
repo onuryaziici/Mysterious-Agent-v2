@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
         this.gameObject.GetComponent<JoystickControl>().enabled = false;
         Debug.Log("Player Died!");
         StartCoroutine(Restart());
-        PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex);
+        //PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex);
         LevelManager.control.SaveDie();
     }
     IEnumerator Restart()
