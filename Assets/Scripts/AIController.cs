@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+
 public class AIController : MonoBehaviour
 {
     public static AIController ai;
@@ -586,16 +587,10 @@ public class AIController : MonoBehaviour
     }
     public IEnumerator TakeDamage()
     {
-
         PlayerPrefs.SetInt("Enemies", PlayerPrefs.GetInt("Enemies")-1);
         numberOfEnemies= PlayerPrefs.GetInt("Enemies");
         animator.SetTrigger("Death");
         isDead = true;
-        if (!player.GetComponent<BoxCollider>().Equals(null))
-        {
-            Debug.Log("ser");
-            kill.gameObject.SetActive(false);
-        }
         transform.Find("ViewVisualisation").gameObject.SetActive(false);
         this.gameObject.GetComponent<AIController>().enabled = false;
         this.gameObject.GetComponent<Rigidbody>().isKinematic = true;
@@ -605,6 +600,11 @@ public class AIController : MonoBehaviour
         AgentCount.instance.agentCount--;
         AgentCount.instance.agentCountText.text = "" + AgentCount.instance.agentCount;
         yield return new WaitForSeconds(1f);
+        if (gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == true)
+        {
+            kill.gameObject.SetActive(false);
+        }
+        
     }
 
 

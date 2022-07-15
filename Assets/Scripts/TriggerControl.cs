@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class TriggerControl : MonoBehaviour
 {
     public static TriggerControl instance = null;
@@ -17,12 +18,14 @@ public class TriggerControl : MonoBehaviour
     bool meshChange = false;
     public bool isCompleted = false;
     public bool safe = false;
+    
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
         }
+        
     }
     private void Start()
     {
@@ -33,13 +36,14 @@ public class TriggerControl : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Hide"))
         {
+
             meshChange = true;
             triggerObject = other.gameObject;
         }
-        if (other.gameObject.CompareTag("Attack") && !gameObject.GetComponent<BoxCollider>().Equals(null))
+        if (other.gameObject.CompareTag("Attack") && !gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == true)
         {
             safe = false;
-            if (!gameObject.GetComponent<BoxCollider>().Equals(null))
+            if (!gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == true)
             {
                 cloud.Play();
             }
@@ -47,7 +51,7 @@ public class TriggerControl : MonoBehaviour
             gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled = true;
             gameObject.GetComponent<Renderer>().enabled = false;
 
-            if (gameObject.GetComponent<CapsuleCollider>().Equals(null))
+            if (gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == true)
             {
                 gameObject.AddComponent<CapsuleCollider>();
 
@@ -69,7 +73,7 @@ public class TriggerControl : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Hide"))
         {
-            Debug.Log("MeshChange");
+            
             meshChange = false;
             triggerObject = other.gameObject;
             reloadImage.fillAmount = 0;
@@ -82,17 +86,21 @@ public class TriggerControl : MonoBehaviour
         MeshChange();
         MeshPlayer();
         MeshReturn();
+
     }
     void Reload()
     {
         reloadImage.transform.parent.rotation = Quaternion.Euler(0, gameObject.transform.rotation.y, 0);
 
-        if (meshChange && gameObject.GetComponent<BoxCollider>().Equals(null))
+        if (meshChange && gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == true)
         {
+            
+
             reloadImage.fillAmount += Time.deltaTime / 3;
         }
         if (reloadImage.fillAmount == 1)
         {
+
             isCompleted = true;
             cloud.Play();
         }
@@ -103,9 +111,11 @@ public class TriggerControl : MonoBehaviour
     }
     void MeshChange()
     {
+
         if (isCompleted && meshChange)
         {
-            safe=true;
+
+            safe = true;
             gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled = false;
             gameObject.AddComponent<MeshFilter>();
             gameObject.GetComponent<Renderer>().enabled = true;
@@ -113,7 +123,7 @@ public class TriggerControl : MonoBehaviour
             gameObject.GetComponent<MeshFilter>().mesh = triggerObject.GetComponentInParent<MeshFilter>().mesh;
             gameObject.GetComponent<Renderer>().material = triggerObject.GetComponentInParent<Renderer>().material;
 
-            if (gameObject.GetComponent<BoxCollider>().Equals(null))
+            if (gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == false)
             {
                 gameObject.AddComponent<BoxCollider>();
             }
@@ -130,7 +140,7 @@ public class TriggerControl : MonoBehaviour
         {
             meshChange = false;
             safe = false;
-            if (!gameObject.GetComponent<BoxCollider>().Equals(null))
+            if (gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == false)
             {
                 cloud.Play();
             }
@@ -138,7 +148,7 @@ public class TriggerControl : MonoBehaviour
             gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled = true;
             gameObject.GetComponent<Renderer>().enabled = false;
 
-            if (gameObject.GetComponent<CapsuleCollider>().Equals(null))
+            if (gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == true)
             {
                 gameObject.AddComponent<CapsuleCollider>();
 
@@ -154,7 +164,7 @@ public class TriggerControl : MonoBehaviour
     }
     void MeshPlayer()
     {
-        if (!gameObject.GetComponent<BoxCollider>().Equals(null))
+        if (!gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == true)
         {
             meshReturnBar.fillAmount -= Time.deltaTime / recoveryTime;
         }
