@@ -97,12 +97,15 @@ public class AIController : MonoBehaviour
         viewMeshFilter.mesh = viewMesh;
 
         PlayerPrefs.SetInt("Enemies", GameObject.FindGameObjectsWithTag("Enemy").Length);
-        //StartCoroutine(TakeDamage());
     }
 
     private void Update()
     {
-           mesafe = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
+        if (Input.GetKeyDown("space"))
+        {
+            StartCoroutine(TakeDamage());
+        }
+        mesafe = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
             EnviromentView();                       //  Check whether or not the player is in the enemy's field of vision
 
        
@@ -159,7 +162,7 @@ public class AIController : MonoBehaviour
         {
             viewMeshFilter.GetComponent<MeshRenderer>().material = fovWhiteMaterial;
         }
-        if (!player.GetComponent<BoxCollider>().Equals(null))
+        if (gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == false)
         {
             if (!isDead)
             {
@@ -226,10 +229,8 @@ public class AIController : MonoBehaviour
             }
             else
             {
-                Debug.Log("Stop00");
                 if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) >= 2.5f)
                 {
-                    Debug.Log("Stop11");
                     //  Wait if the current position is not the player position
                     animator.SetBool("IsWalk",false);
                     Stop();

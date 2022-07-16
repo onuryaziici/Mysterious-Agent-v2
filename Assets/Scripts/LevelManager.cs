@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +12,7 @@ public class LevelManager : MonoBehaviour
     float score = 1;
     public List<int> buildIndex = new List<int> { 1, 2, 3, 4 };
     float bossLevelIndex = 5;
-    int random;
+    public int random;
     float mode;
     float level = 1;
 
@@ -55,17 +56,31 @@ public class LevelManager : MonoBehaviour
         }
         score = PlayerPrefs.GetFloat("Checkpoint");
         PlayerPrefs.SetFloat("Score", score);
-        //SceneManager.LoadScene(PlayerPrefs.GetInt("Level"));
+        SceneManager.LoadScene(PlayerPrefs.GetInt("Level"));
         scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Checkpoint")).ToString();
-        List<int> buildIndexClone = new List<int>();
-        buildIndexClone = buildIndex;
-        if (buildIndexClone.Contains(PlayerPrefs.GetInt("Level")))
-        {
-            buildIndexClone.Remove(PlayerPrefs.GetInt("Level"));
-            int buildIndex = Random.Range(0, buildIndexClone.Count);
-            SceneManager.LoadScene(buildIndex);
-            Debug.Log(PlayerPrefs.GetInt("Level"));
-        }
+        //List<int> buildIndexClone = new List<int>();
+        //buildIndexClone.Add(1);
+        //buildIndexClone.Add(2);
+        //buildIndexClone.Add(3);
+        //buildIndexClone.Add(4);
+        //if (buildIndexClone.Contains(PlayerPrefs.GetInt("Level")))
+        //{
+        //    buildIndexClone.Remove(PlayerPrefs.GetInt("Level"));
+        //    int buildIndexRandom = Random.Range(0, buildIndexClone.Count);
+        //    SceneManager.LoadScene(buildIndexClone[buildIndexRandom]);
+        //    Debug.Log(PlayerPrefs.GetInt("Level"));
+        //}
+        //else
+        //{
+        //    if (PlayerPrefs.GetInt("Level") == 0)
+        //    {
+        //        SceneManager.LoadScene(0);
+        //    }
+        //    else if (PlayerPrefs.GetInt("Level") % 5 == 0)
+        //    {
+        //        SceneManager.LoadScene(5);
+        //    }
+        //}
     }
     private void Update()
     {
@@ -80,11 +95,13 @@ public class LevelManager : MonoBehaviour
                 buildIndex.Remove(SceneManager.GetActiveScene().buildIndex);
                 random = Random.Range(0, buildIndex.Count);
                 SceneManager.LoadScene(buildIndex[random]);
+                PlayerPrefs.SetInt("Level", buildIndex[random]);
             }
             else
             {
                 random = Random.Range(0, buildIndex.Count);
                 SceneManager.LoadScene(buildIndex[random]);
+                PlayerPrefs.SetInt("Level", buildIndex[random]);
             }
         }
         else if (score % bossLevelIndex == 0)

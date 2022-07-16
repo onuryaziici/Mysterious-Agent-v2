@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
@@ -24,7 +25,7 @@ public class Player : MonoBehaviour
     {
         currentHealth = maxHealth;
         anim = GetComponent<Animator>();
-        PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex);
+        //PlayerPrefs.SetInt("Level", LevelManager.control.buildIndex[LevelManager.control.random]);
     }
 
 
@@ -40,7 +41,6 @@ public class Player : MonoBehaviour
         isDie = true;
         anim.SetBool("isDie", isDie);
         this.gameObject.GetComponent<JoystickControl>().enabled = false;
-        Debug.Log("Player Died!");
         StartCoroutine(Restart());
         //PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex);
         LevelManager.control.SaveDie();
