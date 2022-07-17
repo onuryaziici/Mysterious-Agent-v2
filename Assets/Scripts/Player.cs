@@ -12,7 +12,6 @@ public class Player : MonoBehaviour
     public int currentHealth;
     Animator anim;
     public bool isDie = false;
-    // Start is called before the first frame update
 
     private void Awake()
     {
@@ -25,7 +24,6 @@ public class Player : MonoBehaviour
     {
         currentHealth = maxHealth;
         anim = GetComponent<Animator>();
-        //PlayerPrefs.SetInt("Level", LevelManager.control.buildIndex[LevelManager.control.random]);
     }
 
 
@@ -42,7 +40,6 @@ public class Player : MonoBehaviour
         anim.SetBool("isDie", isDie);
         this.gameObject.GetComponent<JoystickControl>().enabled = false;
         StartCoroutine(Restart());
-        //PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex);
         LevelManager.control.SaveDie();
     }
     IEnumerator Restart()

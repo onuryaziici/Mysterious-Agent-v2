@@ -58,29 +58,6 @@ public class LevelManager : MonoBehaviour
         PlayerPrefs.SetFloat("Score", score);
         SceneManager.LoadScene(PlayerPrefs.GetInt("Level"));
         scoreText.text = "Level: " + (PlayerPrefs.GetFloat("Checkpoint")).ToString();
-        //List<int> buildIndexClone = new List<int>();
-        //buildIndexClone.Add(1);
-        //buildIndexClone.Add(2);
-        //buildIndexClone.Add(3);
-        //buildIndexClone.Add(4);
-        //if (buildIndexClone.Contains(PlayerPrefs.GetInt("Level")))
-        //{
-        //    buildIndexClone.Remove(PlayerPrefs.GetInt("Level"));
-        //    int buildIndexRandom = Random.Range(0, buildIndexClone.Count);
-        //    SceneManager.LoadScene(buildIndexClone[buildIndexRandom]);
-        //    Debug.Log(PlayerPrefs.GetInt("Level"));
-        //}
-        //else
-        //{
-        //    if (PlayerPrefs.GetInt("Level") == 0)
-        //    {
-        //        SceneManager.LoadScene(0);
-        //    }
-        //    else if (PlayerPrefs.GetInt("Level") % 5 == 0)
-        //    {
-        //        SceneManager.LoadScene(5);
-        //    }
-        //}
     }
     private void Update()
     {
