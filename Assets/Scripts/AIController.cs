@@ -235,7 +235,7 @@ public class AIController : MonoBehaviour
                 
             }
         }
-        if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) <= 4f)
+        if (Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) <= 2.5f)
         {
             Stop();
         }
