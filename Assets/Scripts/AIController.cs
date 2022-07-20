@@ -160,6 +160,8 @@ public class AIController : MonoBehaviour
         }
         if (gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == false)
         {
+            Debug.Log("agagag");
+
             if (!isDead)
             {
                 kill.gameObject.SetActive(true);

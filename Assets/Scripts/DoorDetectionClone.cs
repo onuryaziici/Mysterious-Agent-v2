@@ -36,6 +36,7 @@ public class DoorDetectionClone : MonoBehaviour
             {
                 StartCoroutine(WaitForNextScene());
                 finishAnim.SetTrigger("Finish");
+
             }
         }
     }
