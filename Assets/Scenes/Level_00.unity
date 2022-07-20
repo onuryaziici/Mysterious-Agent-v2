@@ -3083,6 +3083,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8740340137559968829, guid: 9248c9071671b624b865caa3331168a0, type: 3}
+--- !u!198 &729940572 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3767971137783034612, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
+  m_PrefabInstance: {fileID: 3767971138702443456}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &735340323 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 40c9c74bbd665a74586b4fe17cd09d48, type: 3}
@@ -3838,10 +3843,6 @@ PrefabInstance:
       propertyPath: kill
       value: 
       objectReference: {fileID: 1690264553}
-    - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
-      propertyPath: cloud
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
       propertyPath: player
       value: 
@@ -13631,7 +13632,7 @@ PrefabInstance:
     - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
       propertyPath: cloud
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 729940572}
     - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
       propertyPath: player
       value: 
