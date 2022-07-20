@@ -158,7 +158,7 @@ public class AIController : MonoBehaviour
         {
             viewMeshFilter.GetComponent<MeshRenderer>().material = fovWhiteMaterial;
         }
-        if (gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == false)
+        if (player.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == false)
         {
             Debug.Log("agagag");
 
@@ -600,7 +600,7 @@ public class AIController : MonoBehaviour
         AgentCount.instance.agentCount--;
         AgentCount.instance.agentCountText.text = "" + AgentCount.instance.agentCount;
         yield return new WaitForSeconds(1f);
-        if (gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == true)
+        if (player.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == true)
         {
             kill.gameObject.SetActive(false);
         }
