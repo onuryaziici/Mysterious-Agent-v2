@@ -3,7 +3,17 @@ guid: fd4fec6d8ff1fe0458570353a2f1daa5
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: atlas7
+    second: {fileID: 2100000, guid: 48bf94f66d9ee674eac430c41a5de01b, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: PolygonCity_Texture_01_A
+    second: {fileID: 2800000, guid: b44e09b428ecbfa4ea9f030637c141c1, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
