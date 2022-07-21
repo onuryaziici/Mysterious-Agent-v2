@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44970727, g: 0.4997756, b: 0.5756324, a: 1}
+  m_IndirectSpecularColor: {r: 0.44970763, g: 0.49977607, b: 0.5756336, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -895,6 +895,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -6281424698479989189, guid: 40c9c74bbd665a74586b4fe17cd09d48, type: 3}
+--- !u!198 &224412789 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5479588313418535050, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
+  m_PrefabInstance: {fileID: 391653792}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &242721283 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7888244336346310560, guid: db85db9740de403409358c0c4fc6022a, type: 3}
@@ -1409,7 +1414,7 @@ PrefabInstance:
     - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
       propertyPath: muzzleFlash
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 224412789}
     - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
       propertyPath: skinnedMeshRenderer
       value: 
@@ -3475,10 +3480,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.67376804
+  m_Height: 2.139312
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 1.069656, z: 0.17376804}
 --- !u!54 &771666071
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3829,7 +3834,7 @@ PrefabInstance:
     - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
       propertyPath: muzzleFlash
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 920134437}
     - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
       propertyPath: skinnedMeshRenderer
       value: 
@@ -4447,6 +4452,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 40c9c74bbd665a74586b4fe17cd09d48, type: 3}
   m_PrefabInstance: {fileID: 1307394460}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &920134437 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5479588313418535050, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
+  m_PrefabInstance: {fileID: 816413950}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &927260345 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 40c9c74bbd665a74586b4fe17cd09d48, type: 3}
@@ -4561,7 +4571,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d4ec6ef0f1f51bb4a9eedfd3de693e82, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2541840859129327162, guid: d4ec6ef0f1f51bb4a9eedfd3de693e82, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6980,7 +6990,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1174740867
 Animator:
   serializedVersion: 3
@@ -13237,10 +13247,6 @@ PrefabInstance:
     - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
       propertyPath: viewRadius
       value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
-      propertyPath: muzzleFlash
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
       propertyPath: skinnedMeshRenderer

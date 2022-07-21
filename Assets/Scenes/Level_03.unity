@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44970727, g: 0.4997756, b: 0.5756324, a: 1}
+  m_IndirectSpecularColor: {r: 0.44970763, g: 0.49977607, b: 0.5756336, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1684,10 +1684,6 @@ PrefabInstance:
       value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
-      propertyPath: muzzleFlash
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
       propertyPath: skinnedMeshRenderer
       value: 
       objectReference: {fileID: 994622450}
@@ -1806,7 +1802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agentCountText: {fileID: 771383674}
-  agentCount: 3
+  agentCount: 4
   newAgentCount: 0
 --- !u!4 &400738500
 Transform:
@@ -3670,10 +3666,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.65188694
+  m_Height: 2.1262295
   m_Direction: 1
-  m_Center: {x: 0, y: 1, z: 0}
+  m_Center: {x: 0, y: 1.0631148, z: 0.15188694}
 --- !u!54 &771666071
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4073,10 +4069,6 @@ PrefabInstance:
     - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
       propertyPath: viewRadius
       value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
-      propertyPath: muzzleFlash
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
       propertyPath: skinnedMeshRenderer
@@ -7046,7 +7038,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1174740867
 Animator:
   serializedVersion: 3
@@ -12463,10 +12455,6 @@ PrefabInstance:
       value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
-      propertyPath: muzzleFlash
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
       propertyPath: skinnedMeshRenderer
       value: 
       objectReference: {fileID: 1458763380}
@@ -12922,10 +12910,6 @@ PrefabInstance:
     - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
       propertyPath: viewRadius
       value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
-      propertyPath: muzzleFlash
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3767971138619511956, guid: c0434f2c4cad22540ae061625eff1b5c, type: 3}
       propertyPath: skinnedMeshRenderer
