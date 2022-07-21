@@ -1,11 +1,41 @@
 fileFormatVersion: 2
-guid: dae682d9bbfb6ac40bceb0625e6dfc0d
+guid: 3407f857c3643b0418e38218f9b82c21
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
+      74: 5238877145037364071
+    second: Armature|1tpose
+  - first:
+      74: -6345219573388976415
+    second: Armature|agent_idle
+  - first:
+      74: -2845632438325488049
+    second: Armature|agent_walk
+  - first:
+      74: -9131349657557742433
+    second: Armature|die
+  - first:
+      74: -2231412231155649483
+    second: Armature|soldier_Attack
+  - first:
+      74: 927065635282766132
+    second: Armature|soldier_attack_walk
+  - first:
+      74: 107625406523498672
+    second: Armature|soldier_idle
+  - first:
+      74: 527155500844951451
+    second: Armature|soldier_run
+  - first:
+      74: 6866891397946221389
+    second: Armature|soldier_wak
+  - first:
+      74: -5237552157492095756
+    second: Armature|win
+  - first:
       74: -203655887218126122
-    second: mixamo.com
+    second: Walk_Cartoon
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -33,7 +63,36 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walk_Cartoon
+      takeName: mixamo.com
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 138
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
