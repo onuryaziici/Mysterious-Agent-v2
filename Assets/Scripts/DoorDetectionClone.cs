@@ -20,7 +20,7 @@ public class DoorDetectionClone : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") && PlayerPrefs.GetInt("Enemies") == openEnemyCount)
         {
-            GameObject.Find("door 1").GetComponent<MeshCollider>().enabled = false;
+            //GameObject.Find("door 1").GetComponent<MeshCollider>().enabled = false;
             if (openTrigger)
             {
                 anim.Play("DoorOpen", 0, 0.0f);
