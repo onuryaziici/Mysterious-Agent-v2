@@ -34,15 +34,19 @@ public class DoorDetectionClone : MonoBehaviour
 
             else if (closeTrigger && PlayerPrefs.GetInt("Enemies") == closeEnemyCount)
             {
+                anim.Play("CloseDoor", 0, 0.0f);
                 StartCoroutine(WaitForNextScene());
                 finishAnim.SetTrigger("Finish");
+                
 
             }
         }
     }
     IEnumerator WaitForNextScene()
     {
+        // LevelManager.control.ScoreInc();
         yield return new WaitForSeconds(1f);
         LevelManager.control.LevelManage();
+        
     }
 }

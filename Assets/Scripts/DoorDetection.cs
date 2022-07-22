@@ -35,9 +35,11 @@ public class DoorDetection : MonoBehaviour
 
            else if (closeTrigger && PlayerPrefs.GetInt("Enemies") == closeEnemyCount)
             {
+                anim.Play("CloseDoor", 0, 0.0f);
                 StartCoroutine(WaitForNextScene());
                 finishAnim.SetTrigger("Finish");
                 LevelManager.control.SaveStart();
+                Destroy(this.GetComponent<DoorDetection>());
             }
         }
     }
@@ -45,6 +47,8 @@ public class DoorDetection : MonoBehaviour
     {
         LevelManager.control.ScoreInc();
         yield return new WaitForSeconds(1f);
+        // LevelManager.control.LevelManage();
+        
     }
 
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class CamFollow : MonoBehaviour
 {
     GameObject player;
-    Vector3 offset = new Vector3(0, 15, -5);
+    public Vector3 offset = new Vector3(0, 15, -8);
     private void Awake()
     {
         player = GameObject.Find("Player");

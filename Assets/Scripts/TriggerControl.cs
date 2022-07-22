@@ -96,7 +96,7 @@ public class TriggerControl : MonoBehaviour
         {
             
 
-            reloadImage.fillAmount += Time.deltaTime / 3;
+            reloadImage.fillAmount += Time.deltaTime / 1.8f;
         }
         if (reloadImage.fillAmount == 1)
         {
