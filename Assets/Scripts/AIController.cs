@@ -102,10 +102,10 @@ public class AIController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartCoroutine(TakeDamage());
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    StartCoroutine(TakeDamage());
+        //}
         mesafe = Vector3.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position);
             EnviromentView();                       //  Check whether or not the player is in the enemy's field of vision
 
@@ -614,14 +614,18 @@ public class AIController : MonoBehaviour
         AgentCount.instance.agentCount--;
         AgentCount.instance.agentCountText.text = "" + AgentCount.instance.agentCount;
         yield return new WaitForSeconds(1f);
-        if (player.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == true)
-        {
+        //if (player.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == true)
+        //{
             kill.gameObject.SetActive(false);
             if (killArrow != null)
             {
                 killArrow.gameObject.SetActive(false);
             }
-        }
+        //}
+        //else
+        //{
+        //    kill.gameObject.SetActive(false);
+        //}
         
     }
 

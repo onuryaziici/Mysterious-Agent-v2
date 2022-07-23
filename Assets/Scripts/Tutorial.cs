@@ -18,36 +18,46 @@ public class Tutorial : MonoBehaviour
     }
     void Update()
     {
-        if (player.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == true && PlayerPrefs.GetInt("Enemies") != 0)
+        if (meshArrows[0] != null && meshArrows[1] != null && meshArrows[2] != null)
         {
-            meshArrows[0].gameObject.SetActive(true);
-            meshArrows[1].gameObject.SetActive(true);
-            meshArrows[2].gameObject.SetActive(true);
+            if (player.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == true && PlayerPrefs.GetInt("Enemies") != 0)
+            {
+                meshArrows[0].gameObject.SetActive(true);
+                meshArrows[1].gameObject.SetActive(true);
+                meshArrows[2].gameObject.SetActive(true);
+            }
+            else if (player.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == false)
+            {
+                meshArrows[0].gameObject.SetActive(false);
+                meshArrows[1].gameObject.SetActive(false);
+                meshArrows[2].gameObject.SetActive(false);
+            }
+            else if (PlayerPrefs.GetInt("Enemies") == 0)
+            {
+                meshArrows[0].gameObject.SetActive(false);
+                meshArrows[1].gameObject.SetActive(false);
+                meshArrows[2].gameObject.SetActive(false);
+            }
         }
-        else if(player.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == false)
+        if (PlayerPrefs.GetInt("Enemies") == 1)
         {
-            meshArrows[0].gameObject.SetActive(false);
-            meshArrows[1].gameObject.SetActive(false);
-            meshArrows[2].gameObject.SetActive(false);
-        }
-        else if (PlayerPrefs.GetInt("Enemies") == 0)
-        {
-            meshArrows[0].gameObject.SetActive(false);
-            meshArrows[1].gameObject.SetActive(false);
-            meshArrows[2].gameObject.SetActive(false);
+            Destroy(meshArrows[0]);
+            Destroy(meshArrows[1]);
+            Destroy(meshArrows[2]);
         }
 
-        if (trapButton.transform.localScale.y >= 2.01f && PlayerPrefs.GetInt("Enemies") != 0)
+        if (trapButton.transform.localScale.y >= 2.01f && PlayerPrefs.GetInt("Enemies") == 1)
         {
             trapArrow.SetActive(true);
         }
         else if(trapButton.transform.localScale.y < 2.01f )
         {
-            trapArrow.SetActive(false);
+            Destroy(trapArrow);
         }
         else if (PlayerPrefs.GetInt("Enemies") == 0)
         {
-            trapArrow.SetActive(false);
+            Destroy(trapArrow);
         }
+
     }
 }
