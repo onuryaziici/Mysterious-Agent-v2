@@ -62,6 +62,7 @@ public class AIController : MonoBehaviour
      bool timer=true;
      bool isRotate=true;
      bool Isarrived=true;
+    public GameObject killArrow;
     private void Awake()
     {
         ai = this;
@@ -169,11 +170,21 @@ public class AIController : MonoBehaviour
             {
                 kill.gameObject.SetActive(true);
                 kill.gameObject.transform.rotation = Quaternion.identity;
+                if (killArrow != null)
+                {
+                    killArrow.gameObject.SetActive(true);
+                    killArrow.transform.rotation = Quaternion.identity;
+                }
+
             }
         }
         else
         {
             kill.gameObject.SetActive(false);
+            if (killArrow != null)
+            {
+                killArrow.gameObject.SetActive(false);
+            }
         }
     }
     void LateUpdate()
@@ -606,6 +617,10 @@ public class AIController : MonoBehaviour
         if (player.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().enabled == true)
         {
             kill.gameObject.SetActive(false);
+            if (killArrow != null)
+            {
+                killArrow.gameObject.SetActive(false);
+            }
         }
         
     }
