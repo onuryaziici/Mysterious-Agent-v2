@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44970727, g: 0.4997756, b: 0.5756324, a: 1}
+  m_IndirectSpecularColor: {r: 0.44970763, g: 0.49977607, b: 0.5756336, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2441,7 +2441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7372063566733065918, guid: 14e931651bb01bd48ba48133133f0f6f, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14e931651bb01bd48ba48133133f0f6f, type: 3}
@@ -5076,9 +5076,9 @@ Transform:
   - {fileID: 2082690081}
   - {fileID: 548457409}
   - {fileID: 1932188674}
+  - {fileID: 1662648899}
   - {fileID: 543450653351261124}
   - {fileID: 812146560}
-  - {fileID: 1662648899}
   - {fileID: 543450652548715731}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -7323,7 +7323,7 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 1183806332}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!64 &1662648900
 MeshCollider:
