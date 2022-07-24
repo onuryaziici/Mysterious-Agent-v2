@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public static LevelManager control;
-    float score = 1;
+    public float score = 1;
     public List<int> buildIndex = new List<int> { 1, 2, 3, 4 };
     float bossLevelIndex = 5;
     public int random;
@@ -62,6 +62,7 @@ public class LevelManager : MonoBehaviour
     private void Update()
     {
         Checkpoint();
+        Debug.Log(score);
     }
     public void LevelManage()
     {

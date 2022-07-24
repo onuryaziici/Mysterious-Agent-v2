@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     {
         currentHealth = maxHealth;
         anim = GetComponent<Animator>();
+        LevelUp.instance.LevelImage();
     }
 
 

@@ -46,9 +46,10 @@ public class DoorDetection : MonoBehaviour
     IEnumerator WaitForNextScene()
     {
         LevelManager.control.ScoreInc();
+        LevelUp.instance.LevelInc();
         yield return new WaitForSeconds(1f);
         // LevelManager.control.LevelManage();
-        
+        //LevelUp.instance.LevelImage();
     }
 
 
